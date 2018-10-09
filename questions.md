@@ -87,3 +87,61 @@
 
    在定义变量后没有赋值的时候，变量的值暂时为undefined
 
+9.  link导入样式和@import导入样式的区别
+
+   引入方式：
+
+   link是html标签，通过在html文件中引入，@import在css文件中引入
+
+   兼容性：
+
+   link没有兼容性问题，@import 需要在IE5以上才生效
+
+   css优先级：
+
+   同等权重的样式的优先级：行内样式、内联样式、外联样式、导入样式 
+    外联样式和导入样式都有一个`div{background:XX}`,最终的div样式是外联样式中所定义div样式
+
+   加载顺序：
+
+   link是在加载html文档的时候加载，而如果@import是在外联的css文件中使用，那么@import引入顺序就是在最后面了。 
+
+10. javascript种常见报错的类型
+
+    unexpected token  语法错误；
+
+    .. is not define  变量不存在
+
+    can not set property abc of undefined/null  变量/指针丢失 ... 
+
+    ....
+
+11. childNode和chidlren
+
+    childNodes：获取节点，不同浏览器表现不同；
+
+    　　IE：只获取元素节点；
+
+    　　非IE：获取元素节点与文本节点；
+
+    解决方案：if(childNode.nodeName=="#text") continue 或者 if(childNode.nodeType != '3') continue 
+
+    children：获取元素节点，浏览器表现相同。
+
+    　　因此建议使用children。
+
+12.  垃圾回收机制策略
+
+    现在各大浏览器通常用采用的垃圾回收有两种方法：标记清除、引用计数。
+
+    [参考地址](https://www.cnblogs.com/zhwl/p/4664604.html)
+
+13. 前端存储方案
+
+    存储的场景：
+
+    * 缓存
+    * 通信 （标签页之间/前后端）
+    * 数据共享
+
+    全局变量/cookie/webstorage
