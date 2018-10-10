@@ -186,7 +186,7 @@
 
 20. 不使用任何数据类型，实现键值对。
 
-21.  dpr，display：none后js为什么还可以获取到？
+21. dpr，display：none后js为什么还可以获取到？
 
 22. [排序算法](https://www.jianshu.com/p/ff26ee6958ed)
 
@@ -203,3 +203,33 @@
     principle  将子元素的事件委托给父元素执行（给父元素绑定事件），因为js。。。冒泡，子元素触发事件的时候会触发父元素绑定的时候，再利用事件捕获的机制来判断真正的事件源target，来执行对应的事件处理程序
 
     how  $。。。。
+
+24.  img 3px  
+
+     img标签包裹着div中经常会出现3px的误差  img -> display:block
+
+25. [BFC](http://www.cnblogs.com/lhb25/p/inside-block-formatting-ontext.html)
+
+26. 显式类型转换和隐式类型转换
+
+    显式类型转换：利用本地对象的api方法来对数据进行类型转换 toString/Number/Array.from...
+
+    隐式类型转换： +-*/	if () ...
+
+27. [函数节流和函数防抖](https://www.cnblogs.com/walls/p/6399837.html)
+
+    [参考](https://blog.csdn.net/w_q_1025/article/details/64221654)
+
+    比如，我们在监听scroll的时候，到达某一个区域的时候要去进行ajax请求，不处理的化，到达临界值之后会持续的，不断的发送ajax请求，而我们的要求是一次ajax请求结束之前不能再发送下一次请求，需要进行函数的节流，其实就是利用一个flag控制当一次ajax结束后才能进行下一次请求
+
+    比如，我们希望滚动条停滞之后再去判断位置来控制某些元素，不处理的话，会在scroll事件不断判断
+
+28. 伪数组 
+
+    arguments, HTMLcollection TouchList，classList
+
+    有length，能遍历， 不是数组，所以不能使用数组的方法
+
+    业务需求中经常需要将伪数组转换为真数组
+
+    Array.from , Array.prototype.slice.call(), for for
