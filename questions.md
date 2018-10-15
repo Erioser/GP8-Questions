@@ -204,9 +204,9 @@
 
     how  $。。。。
 
-24.  img 3px  
+24. img 3px  
 
-     img标签包裹着div中经常会出现3px的误差  img -> display:block
+    img标签包裹着div中经常会出现3px的误差  img -> display:block
 
 25. [BFC](http://www.cnblogs.com/lhb25/p/inside-block-formatting-ontext.html)
 
@@ -233,3 +233,53 @@
     业务需求中经常需要将伪数组转换为真数组
 
     Array.from , Array.prototype.slice.call(), for for
+
+29. 前端路由的实现方式
+
+    通过监听地址栏的变化进行页面内容的切换 
+
+    hash hashchange， history 
+
+    ajax 获取代码片段然后渲染，handlebars... , 
+
+30. 堆栈
+
+    1. 栈是一级存储  用完就直接销毁掉了 堆是二级存储，依靠垃圾回收机制销毁
+    2. 栈像子弹 先进后出  堆先进先出
+    3. 变量/初始数据类型 放在栈里，引用数据类型放在堆里
+    4. 值传递/地址传递（引用） -> 深拷贝/浅拷贝
+
+31. [set map](http://es6.ruanyifeng.com/#docs/set-map)
+
+32. 文档碎片
+
+    我们在进行dom操作的时候，可以创建一个文档碎片来存放操作后的dom节点，然后将文档碎片一次性的渲染到document文档中，减少了dom操作
+
+33. xss攻击
+
+    允许恶意web用户利用跨站脚本攻击其他用户访问的页面
+
+    浏览器会有安全级别的限制，例如同源策略，禁止操作文件系统
+
+34. 各种模块化
+
+    AMD                             CMD                    
+
+    前端                            前端                    
+
+    require.js                      sea.js                  
+
+    异步（依赖前置）                  同步（延迟加载, as lazy as possible）
+
+    define([..],(module..) => { ... })  define(() => {var a = require('a'); console.log(a)})
+
+     ES6MODEL        CommonJS 
+
+     前端             后端（node）
+
+     babel编译       node
+
+     同步            同步
+
+     import export    require() module.exports
+
